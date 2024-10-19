@@ -1,0 +1,136 @@
+body {
+    width: auto;
+}
+
+#root{
+    height: 1vh;
+    width: 1vw;
+}
+
+#main-wrapper {
+    flex: 1 1 auto;
+    width: auto;
+    height: 100%;
+    position: absolute;
+    right:10em;
+    top:15em;
+    transition: right 0.3s ease-in-out;
+}
+
+#main-wrapper.collapsed {
+    right: calc(10em - 80px);
+}
+
+.round {
+    width: 45em;
+    height: 2rem;
+    border-radius: 2.5em;
+    border: 1px #000 solid;
+    padding: 5px 5px 5px 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    transition: width 0.3s ease-in-out;
+}
+
+.searchbar{
+    position: absolute;
+    left: 2em;
+    width: 23em;
+    top: 0.15em;
+    font-size: 1.7em;
+    border:none;
+}
+
+.searchbar:focus{
+    outline:none;
+}
+
+.uploadbutton {
+    position: absolute;
+    opacity: 0;
+    top: 0.3rem;
+    left: 0.3rem;
+    height: 2rem;
+    width: 2rem;
+    z-index: 10;
+    border-radius: 2rem;
+    border: none;
+    background: #000;
+}
+
+.uploadbutton:hover {
+    cursor:pointer;
+}
+
+.submitbutton {
+    width: 2.4rem;
+    height: 2.4rem;
+    border: none;
+    border-radius: 2rem;
+    position: absolute;
+    right: -34.8rem;
+    top: 0.15rem;
+}
+
+.submitbutton {
+    width: 2.4rem;
+    height: 2.4rem;
+    opacity: 0;
+    border: none;
+    border-radius: 2rem;
+    position: absolute;
+    right: -34.6rem;
+    top: 0.15rem;
+    z-index: 10;
+}
+
+.submitbutton:hover {
+    cursor:pointer;
+}
+
+#fileSVG {
+    position: absolute;
+    left: 0.3rem;
+    top: 0.3rem;
+    height: 2rem;
+}
+
+#submitSVG {
+    position: absolute;
+    left: 44.3rem;
+    top: 0.3rem;
+    height: 2rem;
+}
+
+.search {
+    position: relative;
+    width: 190px;
+    height: 30px;
+}
+
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    padding-bottom: 0.1em;
+    margin-bottom: 0.2em !important;
+    border-right: .15em solid transparent; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .1em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end 6;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black; }
+  }
